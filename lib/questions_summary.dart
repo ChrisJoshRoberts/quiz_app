@@ -48,7 +48,7 @@ class QuestionsSummary extends StatelessWidget {
                         padding: EdgeInsets.all(6),
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.white12,
+                          color: data['user_answer'] == data['correct_answer'] ? const Color.fromARGB(121, 76, 175, 79) : const Color.fromARGB(92, 244, 67, 54),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
@@ -56,14 +56,17 @@ class QuestionsSummary extends StatelessWidget {
                           style: TextStyle(
                             color: data['user_answer'] == data['correct_answer']
                                 ? Colors.white
-                                : const Color.fromARGB(255, 159, 78, 72),
+                                : const Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
                       ),
-                      Text(
-                        data['correct_answer'] as String,
-                        style: TextStyle(
-                          color: const Color.fromARGB(255, 186, 249, 188),
+                      Container(
+                        padding: EdgeInsets.all(6),
+                        child: Text(
+                          data['correct_answer'] as String,
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                          ),
                         ),
                       ),
                       SizedBox(height: 20),
