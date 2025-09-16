@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
 
@@ -44,7 +42,7 @@ class StartScreen extends StatelessWidget {
             onPressed: () {
               startQuiz();
             },
-            icon: Icon(Icons.arrow_right_rounded, size: 32,),
+            icon: Icon(Icons.arrow_right_rounded, size: 32),
             label: Text('Start Quiz'),
           ),
         ],
